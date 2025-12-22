@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="BOMLineItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ParentAssemblyID" type="xs:string"/>
+        <xs:element name="ComponentID" type="xs:string"/> <xs:element name="Quantity" type="xs:decimal"/>
+        <xs:element name="ScrapFactor" type="xs:decimal"/> <xs:element name="FindNumber" type="xs:integer"/> </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
