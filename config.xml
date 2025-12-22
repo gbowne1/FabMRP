@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemConfiguration>
+  
+  <GlobalSettings>
+    <CompanyName>Alpha Fab &amp; Machine</CompanyName>
+    <Currency>USD</Currency>
+    <MeasurementSystem>Imperial</MeasurementSystem> <DefaultTaxRate>0.0825</DefaultTaxRate>
+    <Language>en-US</Language>
+  </GlobalSettings>
+
+  <FileSystem>
+    <SchemaPath>./schemas/</SchemaPath>
+    <DataPath>./data/</DataPath>
+    <TransformPath>./transforms/</TransformPath>
+    <OfficeTemplates>./templates/</OfficeTemplates>
+    <DocumentExportPath>C:/ERP_Exports/Invoices/</DocumentExportPath>
+    <CADDrawingArchive>Z:/Engineering/Drawings/</CADDrawingArchive>
+  </FileSystem>
+
+  <DataConnections>
+    <PrimaryDB>
+      <Provider>System.Data.SqlClient</Provider>
+      <ConnectionString>Server=FAB-SERVER;Database=ERP_Core;User Id=erp_admin;Password=********;</ConnectionString>
+    </PrimaryDB>
+    <OfficeSync>
+      <AutoRefreshIntervalMinutes>15</AutoRefreshIntervalMinutes>
+      <AllowExcelWriteBack>true</AllowExcelWriteBack>
+    </OfficeSync>
+  </DataConnections>
+
+  <ProductionDefaults>
+    <DefaultLaborRatePerHour>65.00</DefaultLaborRatePerHour>
+    <OvertimeMultiplier>1.5</OvertimeMultiplier>
+    <DefaultScrapAllowancePercentage>0.05</DefaultScrapAllowancePercentage>
+    <ShiftSchedules>
+      <Shift id="Day">07:00-15:30</Shift>
+      <Shift id="Night">15:30-00:00</Shift>
+    </ShiftSchedules>
+  </ProductionDefaults>
+
+  <Security>
+    <EncryptionMethod>AES-256</EncryptionMethod>
+    <UserSessionTimeoutMinutes>120</UserSessionTimeoutMinutes>
+    <AccessLevels>
+      <Level id="Admin">Full</Level>
+      <Level id="Sales">CRM, Quotes, Orders</Level>
+      <Level id="ShopFloor">WorkOrders, Clocking, Inventory</Level>
+    </AccessLevels>
+  </Security>
+
+  <OfficeIntegration>
+    <ExcelAddInEnabled>true</ExcelAddInEnabled>
+    <WordMailMergeEnabled>true</WordMailMergeEnabled>
+    <OutlookNotificationEnabled>true</OutlookNotificationEnabled>
+  </OfficeIntegration>
+
+</SystemConfiguration>
