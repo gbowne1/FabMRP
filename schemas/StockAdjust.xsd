@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="InventoryTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TransactionID" type="xs:string"/>
+        <xs:element name="Timestamp" type="xs:dateTime"/>
+        <xs:element name="MaterialID" type="xs:string"/>
+        <xs:element name="QuantityChange" type="xs:decimal"/>
+        <xs:element name="ReasonCode">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="CycleCount"/>
+              <xs:enumeration value="Damage"/>
+              <xs:enumeration value="ProductionIssue"/>
+              <xs:enumeration value="ReceivingError"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="OperatorID" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
