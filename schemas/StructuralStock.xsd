@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="StructuralStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MaterialID" type="xs:string"/>
+        <xs:element name="ProfileType"> <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="I-Beam"/><xs:enumeration value="Angle"/><xs:enumeration value="Channel"/><xs:enumeration value="Tube"/><xs:enumeration value="RoundBar"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="SectionDimensions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Height" type="xs:decimal"/>
+              <xs:element name="FlangeWidth" type="xs:decimal" minOccurs="0"/>
+              <xs:element name="WallThickness" type="xs:decimal"/>
+              <xs:element name="StandardLength" type="xs:decimal"/> </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WeightPerFoot" type="xs:decimal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
