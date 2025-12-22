@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="OperationType">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Cutting"/>
+        <xs:enumeration value="Bending"/>
+        <xs:enumeration value="Welding"/>
+        <xs:enumeration value="Machining"/>
+        <xs:enumeration value="Assembly"/>
+        <xs:enumeration value="Coating"/>
+        <xs:enumeration value="Inspection"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+</xs:schema>
