@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Consumable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ItemID" type="xs:string"/>
+        <xs:element name="Type" type="xs:string"/> <xs:element name="UnitSize" type="xs:decimal"/>
+        <xs:element name="PressureRating" type="xs:integer" minOccurs="0"/> <xs:element name="SafetyDataSheetURL" type="xs:anyURI"/> </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
