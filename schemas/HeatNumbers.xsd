@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="HeatCertificate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="HeatNumber" type="xs:string"/> <xs:element name="MillName" type="xs:string"/>
+        <xs:element name="CountryOfOrigin" type="xs:string"/>
+        <xs:element name="Chemistry">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Carbon" type="xs:decimal" minOccurs="0"/>
+              <xs:element name="Manganese" type="xs:decimal" minOccurs="0"/>
+              <xs:element name="Silicon" type="xs:decimal" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="YieldStrength" type="xs:integer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
