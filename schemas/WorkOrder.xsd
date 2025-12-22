@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="WorkOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="WONumber" type="xs:string"/>
+        <xs:element name="AssemblyID" type="xs:string"/>
+        <xs:element name="QuantityOrdered" type="xs:integer"/>
+        <xs:element name="QuantityCompleted" type="xs:integer"/>
+        <xs:element name="Status">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Planned"/><xs:enumeration value="Released"/>
+              <xs:enumeration value="In-Progress"/><xs:enumeration value="On-Hold"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="DueDate" type="xs:date"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
