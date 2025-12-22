@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="QCInspection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="WONumber" type="xs:string"/>
+        <xs:element name="InspectorID" type="xs:string"/>
+        <xs:element name="PassFail" type="xs:boolean"/>
+        <xs:element name="MeasurementData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DimensionLabel" type="xs:string"/>
+              <xs:element name="TargetValue" type="xs:decimal"/>
+              <xs:element name="ActualValue" type="xs:decimal"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
