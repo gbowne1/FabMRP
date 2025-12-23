@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="RMALog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RMANumber" type="xs:string"/>
+        <xs:element name="OriginalSONumber" type="xs:string"/>
+        <xs:element name="ReturnDate" type="xs:date"/>
+        <xs:element name="ReasonCode">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="OutOfTolerance"/>
+              <xs:enumeration value="SurfaceFinishIssue"/>
+              <xs:enumeration value="ShippingDamage"/>
+              <xs:enumeration value="WrongMaterial"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="Disposition">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Rework"/>
+              <xs:enumeration value="ScrapAndReplace"/>
+              <xs:enumeration value="CreditOnly"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="AssociatedReworkOrder" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
