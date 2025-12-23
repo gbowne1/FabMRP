@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Quote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="QuoteNumber" type="xs:string"/>
+        <xs:element name="CustomerID" type="xs:string"/>
+        <xs:element name="IssueDate" type="xs:date"/>
+        <xs:element name="ExpirationDate" type="xs:date"/>
+        <xs:element name="LineItems">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PartID" type="xs:string" maxOccurs="unbounded"/>
+              <xs:element name="UnitPrice" type="xs:decimal"/>
+              <xs:element name="LeadTimeWeeks" type="xs:integer"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
