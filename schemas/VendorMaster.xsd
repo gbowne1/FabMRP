@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Vendor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="VendorID" type="xs:string"/>
+        <xs:element name="VendorName" type="xs:string"/>
+        <xs:element name="Category" type="xs:string"/> <xs:element name="QualityRating" type="xs:decimal"/> <xs:element name="PrimaryContact" type="xs:string"/>
+        <xs:element name="CurrencyCode" type="xs:string" default="USD"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
