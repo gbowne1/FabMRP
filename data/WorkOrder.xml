@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkOrder 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="WorkOrder.xsd">
+    
+    <WONumber>WO-12345</WONumber>
+    <AssemblyID>ASSY-99</AssemblyID>
+    <QuantityOrdered>100</QuantityOrdered>
+    <QuantityCompleted>50</QuantityCompleted>
+    <Status>In-Progress</Status>
+    <DueDate>2026-05-20</DueDate>
+</WorkOrder>
